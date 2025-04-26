@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Home</title>
+    <style>
+        .sec1 .container, .sec2 .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sec1 img, .sec2 img {
+            width: 45%;
+            height: auto;
+        }
+        
+        .sec1 .content, .sec2 .content {
+            width: 45%;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .sec1 .content p, .sec2 .content p {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        .sec1 div button, .sec2 div button {
+            border: white 3px solid;
+            background-color: #ADCCE9;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .sec1 div a, .sec2 div a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .sec1 div button:hover, .sec2 div button:hover {
+            opacity: 0.5;
+            border: none;
+        }
+
+        @media (max-width: 600px) {
+            header nav ul {
+                flex-direction: column;
+                gap: 15px;
+                padding-right: 0;
+                text-align: center;
+            }
+
+            .sec1 .container, .sec2 .container {
+                flex-direction: column;
+                justify-content: flex-start;
+                height: auto;
+            }
+
+            .sec1 img, .sec2 img {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .sec1 .content, .sec2 .content {
+                width: 80%;
+                padding: 15px;
+            }
+
+            .sec1 .content p, .sec2 .content p {
+                font-size: 18px;
+            }
+
+            footer {
+                font-size: 0.9rem;
+                padding: 15px 0;
+            }
+
+            footer a {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 375px) {
+            header nav ul {
+                gap: 10px;
+            }
+
+            .sec1 .content, .sec2 .content {
+                width: 90%;
+            }
+
+            .sec1 .content p, .sec2 .content p {
+                font-size: 16px;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+    </style>  
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="business.html">Our business</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <img src="./img/betime.png" alt="Betime Logo">
+    </header>
+
+    <section class="sec1">
+        <div class="container">
+            <img src="./img/betime.png" alt="Betime Image">
+            <div class="content">
+                <h1>BETIME Construction sites</h1>
+                <p>
+                    Based on the provided document, Betime Engineering appears to be a company specializing in Mechanical and Electrical (M&E) contracting. They undertake a variety of projects, as evidenced by their involvement in the "Mooz & Company Myanmar New Factory," "Fumakilla Myanmar New Factory," "Osotspa, Jupiter Project," and "KMCL New Headquarter Project." Their scope of work often includes fire fighting systems, plumbing systems, sanitary systems, and air compressor systems. Betime Engineering collaborates with main contractors such as Penta-Ocean Construction Co.Ltd, Dawn Construction Co.Ltd, and KONOIKE Construction Co.Ltd, and has worked on projects with contract amounts ranging from 76,500 USD to 120,000 USD.
+                </p>
+                <button>
+                    <a href="">Learn More</a>
+                </button>
+            </div>
+        </div>
+    </section>  
+
+    <section class="sec2">
+        <div class="container">
+            <div class="content">
+                <h1>BETIME Cars and Motor Cycle spare part shops</h1>
+                <p>
+                    We understand that keeping your vehicle running smoothly is your top priority. That's why we're dedicated to providing a comprehensive selection of high-quality spare parts for both cars and motorcycles. Whether you're a seasoned mechanic or a vehicle owner tackling a DIY repair, BETIME is your reliable partner for sourcing the parts you need. We stock a wide range of components, from essential maintenance items to specialized replacements, ensuring you can find the right fit for your vehicle. Trust BETIME to deliver dependable parts and get you back on the road with confidence.
+                </p>
+                <button>
+                    <a href="">Learn More</a>
+                </button>
+            </div>
+            <img src="./img/betime.png" alt="Betime Image">
+        </div>
+    </section>
+    
+    <footer>
+        Made by <a href="https://t.me/zwinhtewah">AllLay</a>
+    </footer>
+</body>
+</html>
