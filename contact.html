@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Contact</title>
+    <style>
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+    
+        .contact-info, .contact-form {
+            max-width: 600px;
+            width: 100%;
+            margin: 10px 0;
+        }
+    
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+        .info-box {
+            background-color: #2CCCC4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+    
+        .contact-form input, .contact-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    
+        .contact-form button {
+            background-color: #2CCCC4;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 100px;
+        }
+    
+        .contact-form button:hover {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="business.html">Our business</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <img src="./img/betime.png" alt="Betime Logo">
+    </header>
+
+    <section>
+        <div class="contact-info">
+            <div class="info-box">
+                <h1>📞CALL US</h1>
+                <h2>
+                    09-969134035<br>
+                    09-456988687
+                </h2>
+            </div>
+    
+            <div class="info-box">
+                <h1>LOCATION</h1>
+                <p>
+                    No:93/B, THUKHA PARK (8) WARD, SHWEPYITHA
+                    TOWNSHIP, YANGON
+                </p>
+            </div>
+    
+            <div class="info-box">
+                <h1>🕒EMAIL</h1>
+                <p>
+                    myokhaing012@gmail.com<br>
+                    thawhetsan.15e@gmail.com<br>
+                    khatkhatzaw.15e@gmail.com
+                </p>
+            </div>
+        </div>
+    
+        <div class="contact-form">
+            <h1>Contact Us</h1>
+            <input type="text" placeholder="Enter your Name">
+            <input type="email" placeholder="Enter a valid email address">
+            <input type="text" placeholder="Enter your Message">
+            <button>Submit</button>
+        </div>
+    </section>    
+
+    <footer>
+        Made by <a href="https://t.me/zwinhtewah">AllLay</a>
+    </footer>
+
+    <script>
+        document.querySelector('button').addEventListener('click', async () => {
+            const name = document.querySelector('input[placeholder="Enter your Name"]').value;
+            const email = document.querySelector('input[placeholder="Enter a valid email address"]').value;
+            const message = document.querySelector('input[placeholder="Enter your Message"]').value;
+
+            try {
+                const response = await fetch('http://localhost:5000/send', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, message })
+                });
+
+                const result = await response.text();
+                alert(result);
+            } catch (error) {
+                alert('Failed to send message.');
+                console.error(error);
+            }
+        });
+    </script>
+</body>
+</html>
