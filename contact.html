@@ -116,7 +116,7 @@
             const message = document.querySelector('input[placeholder="Enter your Message"]').value;
 
             try {
-                const response = await fetch('http://localhost:5000/send', {
+                const response = await fetch('https://betime-b.onrender.com/send', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
